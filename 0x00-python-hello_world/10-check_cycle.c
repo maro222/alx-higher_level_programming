@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  *check_cycle - cycle tortoise and hare
@@ -17,10 +17,9 @@ int check_cycle(listint_t *list)
 	here = list;
 	there = list;
 
-	while (there->next->next != NULL && here->next != NULL)
+	while (there->next != NULL)
 	{
-		there = there->next->next;
-		here = here->next;
+		there = there->next;
 		if (there == here)
 			return (1);
 	}
