@@ -17,12 +17,10 @@ int check_cycle(listint_t *list)
 	here = list;
 	there = list;
 
-	if (!here || !there)
-		return (0);
-
-	while (there->next != NULL)
+	while (there->next->next != NULL && here->next != NULL)
 	{
-		there = there->next;
+		there = there->next->next;
+		here = here->next;
 		if (there == here)
 			return (1);
 	}
