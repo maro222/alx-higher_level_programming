@@ -11,13 +11,16 @@ int check_cycle(listint_t *list)
 {
 	listint_t *here, *there;
 
+	if (!list)
+		return (0);
+
 	here = list;
 	there = list;
 
 	if (!here || !there)
 		return (0);
 
-	while (there != NULL)
+	while (there->next != NULL)
 	{
 		there = there->next;
 		if (there == here)
