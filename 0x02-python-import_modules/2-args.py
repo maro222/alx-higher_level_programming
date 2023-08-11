@@ -10,5 +10,5 @@ if __name__ == "__main__":
         print("{:d} argument:".format(1))
     else:
         print("{:d} arguments:".format(size))
-        for i in range(1, size + 1):
-            print("{:d}: {:s}".format(i, sys.argv[i]))
+    for i in range(1, size + 1):
+        print("{:d}: {:s}".format(i, sys.argv[i]))
