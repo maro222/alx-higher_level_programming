@@ -6,4 +6,4 @@ def max_integer(my_list=[]):
     for i in range(1, len(my_list)):
         if mmax < my_list[i]:
             mmax = my_list[i]
-    print("Max: {:d}".format(mmax))
+    return (mmax)
