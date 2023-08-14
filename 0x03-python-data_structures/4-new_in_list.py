@@ -7,4 +7,4 @@ def new_in_list(my_list, idx, element):
             new_list.append(my_list[i])
         else:
             new_list.appeend(element)
-    return (my_list)
+    return (new_list)
