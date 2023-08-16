@@ -2,8 +2,9 @@
 def best_score(a_dictionary):
     if not a_dictionary:
         return (None)
-    mmax
+    mmax, key = float('-inf'), ""
     for k, v in a_dictionary.items():
-        if not mmax or mmax < v:
-            mmax = k
-    return (mmax)
+        if mmax < v:
+            mmax = v
+            key = k
+    return (key)
