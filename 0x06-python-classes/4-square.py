@@ -33,6 +33,7 @@ class Square:
         """
         return (self.__size * self.__size)
 
+    @property
     def size(self):
         """ This function return value of __size
 
@@ -41,6 +42,7 @@ class Square:
         """
         return (self.__size)
 
+    @size.setter
     def size(self, size):
         """ This function set value of __size
 
