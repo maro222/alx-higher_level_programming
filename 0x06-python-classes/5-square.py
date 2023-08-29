@@ -61,8 +61,8 @@ class Square:
         """this Method print square in # form"""
         if __size == 0:
             print()
-            return
-        for i in range(__size):
-            for j in range(__size):
-                print("#", end="")
-            print()
+        else:
+            for i in range(__size):
+                for j in range(__size):
+                    print("#", end="")
+                print()
