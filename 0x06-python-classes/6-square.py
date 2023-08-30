@@ -61,7 +61,7 @@ class Square:
         return (self.__position)
 
     @position.setter
-    def position(self, vlaue):
+    def position(self, value):
         """ set a new position to __posititon
             Args:
                 position: the new position to be set
