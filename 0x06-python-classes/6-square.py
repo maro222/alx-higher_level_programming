@@ -51,7 +51,7 @@ class Square:
         else:
             raise TypeError("size must be an integer")
 
-    @propety
+    @property
     def position(self):
         """ return position os Square
 
