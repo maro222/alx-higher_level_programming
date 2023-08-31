@@ -23,10 +23,10 @@ listint_t *insert_node(listint_t **head, int number)
 	cur = *head;
 	new->n = number;
 	new->next = NULL;
-	
+
 	if (!head)
 	{
-		*head->next = new;
+		(*head)->next = new;
 		return (NULL);
 	}
 
