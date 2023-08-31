@@ -36,11 +36,11 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		if (new->n <= cur->n)
 		{
+			new->next = cur;
 			if (prev != *head)
 				prev->next = new;
 			else
 				prev = new;
-			new->next = cur;
 			return (new);
 		}
 		prev = cur;
