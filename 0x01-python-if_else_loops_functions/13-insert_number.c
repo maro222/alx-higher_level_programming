@@ -32,7 +32,7 @@ listint_t *insert_node(listint_t **head, int number)
 		return (new);
 	}
 
-	while (cur->next)
+	while (cur)
 	{
 		if (new->n <= cur->n)
 		{
