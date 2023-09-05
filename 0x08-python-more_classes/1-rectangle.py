@@ -15,7 +15,7 @@ class Rectangle:
         """getter for width attribute"""
         return (self.__width)
 
-    @setter
+    @width.setter
     def width(self, value):
         """setter for width attribute"""
         if type(value) != int:
@@ -30,7 +30,7 @@ class Rectangle:
         """getter for height attribute"""
         return (self.__height)
 
-    @setter
+    @height.setter
     def height(self, value):
         """setter for height attribute"""
         if type(value) != int:
