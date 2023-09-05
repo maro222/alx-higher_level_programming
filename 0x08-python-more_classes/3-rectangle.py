@@ -54,7 +54,4 @@ class Rectangle:
         """ magic method str() """
         if self.__width == 0 or self.__height == 0:
             return ""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print('#', end='')
-            print()
+        return ((("#" * self.width) + "\n") * self.height)
