@@ -58,7 +58,7 @@ class Rectangle:
         """ magic method str() """
         if self.__width == 0 or self.__height == 0:
             return ""
-        return (((Rectangle.print_symbol * self.width) + "\n") * self.height)[:-1]
+        return (((print_symbol * self.__width) + "\n") * self.__height)[:-1]
 
     def __repr__(self):
         """repr() should return a string representation
