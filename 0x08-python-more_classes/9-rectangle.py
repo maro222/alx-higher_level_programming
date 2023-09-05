@@ -83,5 +83,6 @@ class Rectangle:
             return rect_2
 
     @classmethod
+    """ return the a new instance os h = w = s"""
     def def square(cls, size=0):
         return cls(size, size)
