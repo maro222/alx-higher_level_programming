@@ -32,5 +32,5 @@ My name is omar Ayman
 >>> say_my_name("omar")
 My name is omar 
 
->>> say_my_name("")
-My name is 
+>>> say_my_name("") #doctest: +NORMALIZE_WHITESPACE
+My name is

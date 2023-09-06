@@ -52,8 +52,7 @@ omar   Ayman      .
 >>> text_indentation(2)
 Traceback (most recent call last):
      ...
-TypeError: 'int' object is not iterable
-
+TypeError: text must be a string
 
 >>> text_indentation()
 Traceback (most recent call last):
