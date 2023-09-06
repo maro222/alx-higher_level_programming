@@ -19,8 +19,7 @@ TypeError: first_name must be a string
 My name is omar Ayman
 
 >>> say_my_name("omar")
-My name is omar
+My name is omar 
 
 >>> say_my_name("")
 My name is
- 
