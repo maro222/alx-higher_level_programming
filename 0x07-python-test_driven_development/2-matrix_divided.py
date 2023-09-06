@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""module have matrix_divided function"""
+
+
 def matrix_divided(matrix, div):
     """
     Return a new matrix with items divided by div
@@ -16,11 +19,12 @@ def matrix_divided(matrix, div):
         for item in row:
             if type(item) not in [int, float]:
                 raise TypeError("matrix must be a matrix"
-                                "(list of lists) of integers/floats")
+                                " (list of lists) of integers/floats")
             ncol.append(round(item / div, 2))
         new_mat.append(ncol.copy())
         ncol.clear()
     return (new_mat)
+
 
 if __name__ == '__main__':
     import doctest
