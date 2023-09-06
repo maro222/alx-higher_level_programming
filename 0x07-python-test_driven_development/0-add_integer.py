@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" module of 1 function"""
+
+
 def add_integer(a, b=98):
     """
     Return the addition of 2 integers
@@ -8,6 +11,7 @@ def add_integer(a, b=98):
     if type(b) != int and type(b) != float:
         raise TypeError("b must be an integer")
     return (int(a) + int(b))
+
 
 if __name__ == '__main__':
     import doctest
