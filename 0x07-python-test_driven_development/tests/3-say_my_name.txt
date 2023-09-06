@@ -2,10 +2,11 @@
 
 >>> say_my_name("omar", "Ayman")
 My name is omar Ayman
+<BLANKLINE>
 
 >>> say_my_name("omar")
-My name is omar
-
+My name is omar 
+<BLANKLINE>
 
 >>> say_my_name("omar", 2)
 Traceback (most recent call last):
