@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""A Module fo print_square function """
+
+
 def print_square(size):
     """  function that prints a square with the character #."""
     if type(size) != int:
