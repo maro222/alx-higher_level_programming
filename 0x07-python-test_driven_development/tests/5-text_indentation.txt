@@ -69,3 +69,9 @@ TypeError: text_indentation() takes 1 positional argument but 2 were given
 >>> text_indentation('omar?')
 omar?
 <BLANKLINE>
+
+>>> text_indentation(2)
+Traceback (most recent call last):
+   ...
+    raise TypeError("text must be a string")
+TypeError: text must be a string
