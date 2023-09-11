@@ -3,6 +3,7 @@
 
 
 class MyList(list):
-    """function that prints the list, but sorted (ascending sort)"""
+    """class that have print_sorted function"""
     def print_sorted(self):
+        """function that prints the list, but sorted (ascending sort)"""
         print(sorted(self))
