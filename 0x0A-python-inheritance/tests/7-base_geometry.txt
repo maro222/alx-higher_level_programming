@@ -51,3 +51,16 @@ Traceback (most recent call last):
     ...
     raise TypeError(f"{name} must be an integer")
 TypeError: my_int must be an integer
+
+>>> bg.integer_validator("my_int", 0.5)
+Traceback (most recent call last):
+     ...
+    raise TypeError(f"{name} must be an integer")
+TypeError: my_int must be an integer
+
+>>> bg.integer_validator("my_int", -5.5)
+Traceback (most recent call last):
+     ...
+    raise TypeError(f"{name} must be an integer")
+TypeError: my_int must be an integer
+
