@@ -1,0 +1,40 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+
+>>> my_list.append(1)
+
+>>> my_list.append(-1)
+
+>>> my_list.append(float('inf'))
+
+>>> my_list.append(float('-inf'))
+
+>>> my_list.print_sorted()
+[-inf, -1, 1, inf]
+
+>>> my_list.append(float('nan'))
+
+>>> my_list.print_sorted()
+[-inf, -1, 1, inf, nan]
+
+>>> my_list.append(None)
+
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+    ...
+    print(sorted(self))
+TypeError: '<' not supported between instances of 'NoneType' and 'int'
+
+>>> my_list.append()
+Traceback (most recent call last):
+  ...
+TypeError: append() takes exactly one argument (0 given)
+
+>>> my_list.append(1,2)
+Traceback (most recent call last):
+  ...
+TypeError: append() takes exactly one argument (2 given)
+
+>>> print(my_list)
+[1, -1, inf, -inf, nan, None]
