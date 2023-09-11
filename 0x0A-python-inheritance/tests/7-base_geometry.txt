@@ -33,3 +33,21 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 Traceback (most recent call last):
       ...
 TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+>>> bg.integer_validator("my_int", float('inf'))
+Traceback (most recent call last):
+    ...
+    raise TypeError(f"{name} must be an integer")
+TypeError: my_int must be an integer
+
+>>> bg.integer_validator("my_int", float('-inf'))
+Traceback (most recent call last):
+    ...
+    raise TypeError(f"{name} must be an integer")
+TypeError: my_int must be an integer
+
+>>> bg.integer_validator("my_int", float('nan'))
+Traceback (most recent call last):
+    ...
+    raise TypeError(f"{name} must be an integer")
+TypeError: my_int must be an integer
