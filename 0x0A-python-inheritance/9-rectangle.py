@@ -24,4 +24,4 @@ class Rectangle(BaseGeometry):
         """
         string format of the class
         """
-        return (f"Rectangle {self.__width}/{self.__height}")
+        return (f"[Rectangle] {self.__width}/{self.__height}")
