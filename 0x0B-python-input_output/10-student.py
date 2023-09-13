@@ -12,7 +12,7 @@ class Student:
     def to_json(self, attrs=None):
         res = {}
         res = self.__dict__.copy()
-        if attrs == None:
+        if attrs is None:
             return res
         keys = list(res.keys())
         for key in keys:
