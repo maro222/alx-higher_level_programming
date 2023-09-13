@@ -9,6 +9,6 @@ def class_to_json(obj):
      for JSON serialization of an object
     """
     dic = {}
-    if __dict__ in dir(obj):
+    if '__dict__' in dir(obj):
         dic = obj.__dict__.copy()
     return dic
