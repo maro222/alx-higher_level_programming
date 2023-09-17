@@ -20,5 +20,8 @@ class test_Base(unittest.TestCase):
         self.assertEqual(self.obj2.id, 13)
         self.assertNotEqual(self.obj1.id, self.obj2.id)
 
+    def tearDown(self):
+        del self
+
 if __name__ == "__main__":
     unittest.main()
