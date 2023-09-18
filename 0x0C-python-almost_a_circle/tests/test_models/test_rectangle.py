@@ -1,8 +1,8 @@
+from models.base import Base
 from models.rectangle import Rectangle
-
-
 import unittest
-
+import io
+import sys
 
 class test_Rectangle(unittest.TestCase):
     def setUp(self):
@@ -71,14 +71,29 @@ class test_Rectangle(unittest.TestCase):
         self.assertEqual(self.obj1.area(), 3 * 6)
         self.assertEqual(self.obj2.area(), 2 * 4)
 
+    @staticmethod
+    def capture_stdout(rect, method):
+        """Captures and returns text printed to stdout.
+
+        Args:
+            rect (Rectangle): The Rectangle to print to stdout.
+            method (str): The method to run on rect.
+        Returns:
+            The text printed to stdout by calling method on sq.
+        """
+        capture = io.StringIO()
+        sys.stdout = capture
+        if method == "print":
+            print(rect)
+        else:
+            rect.display()
+        sys.stdout = sys.__stdout__
+        return capture
+
     def test_display(self):
-        a = """###
-               ###
-               ###
-               ###
-               ###
-               ###"""
-        self.assertMultiLineEqual(self.obj1.display(), a)
+        capture = test_Rectangle.capture_stdout(self.obj1, "display")
+        correct = "###\n###\n###\n###\n###\n###\n"
+        self.assertEqual(correct, capture.getvalue())
 
     def tearDown(self):
         del self.obj1

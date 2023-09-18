@@ -1,7 +1,5 @@
-#!/usr/bin/python
-"""Module for task 2"""
-
-
+#!/usr/bin/python3
+"""Module rectangle"""
 from models.base import Base
 
 
