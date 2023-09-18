@@ -6,27 +6,30 @@ import unittest
 
 class test_Rectangle(unittest.TestCase):
     def setUp(self):
-        self.obj1 = Rectangle(5, 10)
+        self.obj1 = Rectangle(3, 6, 0, 0, 200)
         self.obj2 = Rectangle(2, 4, 0, 0, 100)
 
     def test_id(self):
-        #self.assertEqual(self.obj1.id, 1)
+        self.tempobj = Rectangle(5, 10)
+        self.assertEqual(self.tempobj.id, 1)
+
+        self.assertEqual(self.obj1.id, 200)
         self.assertNotEqual(self.obj1.id, self.obj2.id)
         self.assertEqual(self.obj2.id, 100)
 
     def test_getter(self):
-        self.assertEqual(self.obj1.width, 5)
-        self.assertEqual(self.obj1.height, 10)
+        self.assertEqual(self.obj1.width, 3)
+        self.assertEqual(self.obj1.height, 6)
         self.assertEqual(self.obj1.x, 0)
         self.assertEqual(self.obj1.y, 0)
 
     def test_setter(self):
-        self.obj1.width = 6
-        self.obj1.height = 12
+        self.obj1.width = 5
+        self.obj1.height = 10
         self.obj1.x = 1
         self.obj1.y = 1
-        self.assertEqual(self.obj1.width, 6)
-        self.assertEqual(self.obj1.height, 12)
+        self.assertEqual(self.obj1.width, 5)
+        self.assertEqual(self.obj1.height, 10)
         self.assertEqual(self.obj1.x, 1)
         self.assertEqual(self.obj1.y, 1)
 
@@ -64,6 +67,18 @@ class test_Rectangle(unittest.TestCase):
             self.obj1.y = -3
         self.assertEqual(assert_error.exception.args[0], "y must be >= 0")
 
+    def test_area(self):
+        self.assertEqual(self.obj1.area(), 3 * 6)
+        self.assertEqual(self.obj2.area(), 2 * 4)
+
+    def test_display(self):
+        a = """###
+               ###
+               ###
+               ###
+               ###
+               ###"""
+        self.assertMultiLineEqual(self.obj1.display(), a)
 
     def tearDown(self):
         del self.obj1

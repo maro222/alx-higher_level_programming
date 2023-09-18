@@ -80,15 +80,14 @@ class Rectangle(Base):
             print()
             return
 
-        for i in range(self.__width):
-            for j in range(self.__height):
+        for i in range(self.__height):
+            [print(" ", end="") for k in range(self.__x)]
+            for j in range(self.__width):
                 print('#', end="")
             print()
 
     def __str__(self):
         """str magic method"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                        self.__x,
-                                                        self.__y,
-                                                        self.__width,
-                                                        self.__height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+                                                       self.__y, self.__width,
+                                                       self.__height)

@@ -10,8 +10,8 @@ class test_Base(unittest.TestCase):
 
     def test_no_id(self):
         self.obj3 = Base()
-        self.assertEqual(self.obj3.id, 1)
         self.obj4 = Base()
+        self.assertEqual(self.obj3.id, 1)
         self.assertEqual(self.obj4.id, 2)
 
     def test_id(self):
