@@ -5,7 +5,6 @@ import unittest
 class test_Base(unittest.TestCase):
 
     def setUp(self):
-        print("set up")
         self.obj1 = Base(12)
         self.obj2 = Base(13)
 
@@ -21,7 +20,8 @@ class test_Base(unittest.TestCase):
         self.assertNotEqual(self.obj1.id, self.obj2.id)
 
     def tearDown(self):
-        del self
+        del self.obj1
+        del self.obj2
 
 if __name__ == "__main__":
     unittest.main()
