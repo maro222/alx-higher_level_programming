@@ -1,13 +1,20 @@
 #!/usr/bin/python3
-""" 6-main """
-from models.rectangle import Rectangle
+""" 0-main """
+from models.base import Base
 
 if __name__ == "__main__":
 
-    r1 = Rectangle(2, 3, 2, 2)
-    r1.display()
+    b1 = Base()
+    print(b1.id)
 
-    print("---")
+    b2 = Base()
+    print(b2.id)
 
-    r2 = Rectangle(3, 2, 1, 0)
-    r2.display()
+    b3 = Base()
+    print(b3.id)
+
+    b4 = Base(12)
+    print(b4.id)
+
+    b5 = Base()
+    print(b5.id)
