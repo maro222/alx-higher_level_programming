@@ -10,8 +10,9 @@ class test_Rectangle(unittest.TestCase):
         self.obj2 = Rectangle(2, 4, 0, 0, 100)
 
     def test_id(self):
-        self.tempobj = Rectangle(5, 10)
-        self.assertEqual(self.tempobj.id, 1)
+        self.tempobj1 = Rectangle(5, 10)
+        self.tempobj2 = Rectangle(5, 10)
+        self.assertEqual(self.tempobj1.id, self.tempobj2.id - 1)
 
         self.assertEqual(self.obj1.id, 200)
         self.assertNotEqual(self.obj1.id, self.obj2.id)
