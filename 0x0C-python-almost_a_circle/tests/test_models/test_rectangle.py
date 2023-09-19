@@ -91,9 +91,60 @@ class test_Rectangle(unittest.TestCase):
         sys.stdout = sys.__stdout__
         return capture
 
-    def test_display(self):
+    def test_display_obj1(self):
         capture = test_Rectangle.capture_stdout(self.obj1, "display")
         correct = "###\n###\n###\n###\n###\n###\n"
+        self.assertEqual(correct, capture.getvalue())
+
+    def test_display_obj2(self):
+        capture = test_Rectangle.capture_stdout(self.obj2, "display")
+        correct = "##\n##\n##\n##\n"
+        self.assertEqual(correct, capture.getvalue())
+
+    def test_display_obj_with_x(self):
+        obj = Rectangle(2, 2, 2, 0, 22)
+        capture = test_Rectangle.capture_stdout(obj, "display")
+        correct = "  ##\n  ##\n"
+        self.assertEqual(correct, capture.getvalue())
+
+    def test_display_obj_with_y(self):
+        obj = Rectangle(2, 2, 0, 2, 22)
+        capture = test_Rectangle.capture_stdout(obj, "display")
+        correct = "\n\n##\n##\n"
+        self.assertEqual(correct, capture.getvalue())
+
+    def test_display_obj_with_x_and_y(self):
+        obj = Rectangle(2, 2, 1, 2, 222)
+        capture = test_Rectangle.capture_stdout(obj, "display")
+        correct = "\n\n ##\n ##\n"
+        self.assertEqual(correct, capture.getvalue())
+
+    def test_str_obj1(self):
+        capture = test_Rectangle.capture_stdout(self.obj1, 'print')
+        correct = "[Rectangle] (200) 0/0 - 3/6\n"
+        self.assertEqual(correct, capture.getvalue())
+
+    def test_str_obj2(self):
+        capture = test_Rectangle.capture_stdout(self.obj2, 'print')
+        correct = "[Rectangle] (100) 0/0 - 2/4\n"
+        self.assertEqual(correct, capture.getvalue())
+
+    def test_str_obj_with_x(self):
+        obj = Rectangle(2, 3, 1, 0, 22)
+        capture = test_Rectangle.capture_stdout(obj, 'print')
+        correct = "[Rectangle] (22) 1/0 - 2/3\n"
+        self.assertEqual(correct, capture.getvalue())
+
+    def test_str_obj_with_y(self):
+        obj = Rectangle(2, 3, 0, 1, 22)
+        capture = test_Rectangle.capture_stdout(obj, 'print')
+        correct = "[Rectangle] (22) 0/1 - 2/3\n"
+        self.assertEqual(correct, capture.getvalue())
+
+    def test_str_obj_with_x_and_y(self):
+        obj = Rectangle(2, 3, 3, 5, 22)
+        capture = test_Rectangle.capture_stdout(obj, 'print')
+        correct = "[Rectangle] (22) 3/5 - 2/3\n"
         self.assertEqual(correct, capture.getvalue())
 
     def tearDown(self):
