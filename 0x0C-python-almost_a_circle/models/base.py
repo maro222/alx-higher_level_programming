@@ -2,6 +2,7 @@
 """Module for task 1"""
 import json
 
+
 class Base:
     """class Base"""
     __nb_objects = 0
@@ -18,5 +19,5 @@ class Base:
     def to_json_string(list_dictionaries):
         """returns the JSON string representation of list_dictionaries"""
         if list_dictionaries is None:
-            return []
+            return "[]"
         return json.dumps(list_dictionaries)
