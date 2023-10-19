@@ -2,5 +2,5 @@
 SELECT `cities`.`id`, `cities`.`name`, `state`.`name`
 FROM `cities`
 INNER JOIN `states`
-ON `state_id` = `states`.`id`
-ORDER BY `cities`.`id`
+ON `cities`.`state_id` = `states`.`id`
+ORDER BY `cities`.`id` ASC;
